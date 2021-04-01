@@ -7,7 +7,7 @@ import task1.beans3.BeanD;
 import task1.beans3.BeanF;
 
 @Configuration
-@ComponentScan("task1.beans2")
+@ComponentScan({"task1.beans2", "task1.beansWithInterface"})
 public class AppConfig2 {
     @Bean
     public BeanD beanD() {
