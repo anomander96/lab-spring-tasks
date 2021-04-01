@@ -1,4 +1,23 @@
 package task1.beansImpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import task1.otherBeans.OtherBeanB;
+
+@Component
 public class OtherBeanBImpl {
+    private OtherBeanB otherBeanB;
+    private int id;
+
+    public OtherBeanBImpl() {
+    }
+
+    @Autowired
+    public void setOtherBeanB(OtherBeanB otherBeanB) {
+        this.otherBeanB = otherBeanB;
+    }
+
+    public int getId() {
+        return id;
+    }
 }
