@@ -1,9 +1,11 @@
 package task1.otherBeans;
 
 import org.springframework.stereotype.Component;
+import java.io.Serializable;
 
 @Component
-public class OtherBeanC {
+public class OtherBeanC implements Serializable {
+
     private double size;
     private String text;
 

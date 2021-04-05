@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import task1.MyBean;
+import java.io.Serializable;
 import java.util.List;
 
 @Component
-public class GeneralBean {
+public class GeneralBean implements Serializable {
+
     @Autowired
     private List<MyBean> beanServices;
 

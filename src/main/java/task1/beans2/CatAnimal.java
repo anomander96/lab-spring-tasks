@@ -1,13 +1,19 @@
 package task1.beans2;
 
 import org.springframework.stereotype.Component;
+import java.io.Serializable;
 
 @Component
-public class CatAnimal {
+public class CatAnimal implements Serializable {
+
     private int age;
     private String name;
 
     public CatAnimal() {
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public void setAge(int age) {
@@ -16,5 +22,9 @@ public class CatAnimal {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

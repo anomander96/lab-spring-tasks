@@ -3,9 +3,11 @@ package task1.beansImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import task1.otherBeans.OtherBeanA;
+import java.io.Serializable;
 
 @Component
-public class OtherBeanAImpl {
+public class OtherBeanAImpl implements Serializable {
+
     private OtherBeanA otherBeanA;
     private String name;
 
@@ -16,5 +18,9 @@ public class OtherBeanAImpl {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
