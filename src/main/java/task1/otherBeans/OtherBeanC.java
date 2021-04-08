@@ -1,9 +1,11 @@
 package task1.otherBeans;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import java.io.Serializable;
 
 @Component
+@Qualifier("OtherBeanC")
 public class OtherBeanC implements Serializable {
 
     private double size;

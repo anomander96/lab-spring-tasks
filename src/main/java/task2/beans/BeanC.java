@@ -11,8 +11,21 @@ public class BeanC {
     @Value("${beanC.value}")
     private int value;
 
-    public BeanC(String name, int value) {
+    public BeanC() {}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
         this.value = value;
     }
 

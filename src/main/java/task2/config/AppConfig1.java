@@ -6,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 import task2.beans.*;
 
 @Configuration
-@PropertySource("app.properties")
+@PropertySource("classpath:app.properties")
 public class AppConfig1 {
 
     private String name;
@@ -15,23 +15,23 @@ public class AppConfig1 {
     @Bean(initMethod = "customInitMethod",
           destroyMethod = "customDestroyMethod")
     public BeanD beanD() {
-        return new BeanD(name, value);
+        return new BeanD();
     }
 
     @Bean(initMethod = "customInitMethod",
             destroyMethod = "customDestroyMethod")
     public BeanB beanB() {
-        return new BeanB(name, value);
+        return new BeanB();
     }
 
     @Bean(initMethod = "customInitMethod",
             destroyMethod = "customDestroyMethod")
     public BeanC beanC() {
-        return new BeanC(name, value);
+        return new BeanC();
     }
 
     @Bean
-    public MyBeanFactoryPostProcessor myBeanFactoryPostProcessor() {
+    public static MyBeanFactoryPostProcessor myBeanFactoryPostProcessor() {
         return new MyBeanFactoryPostProcessor();
     }
 

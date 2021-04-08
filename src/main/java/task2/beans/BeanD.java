@@ -11,8 +11,21 @@ public class BeanD {
     @Value("${beanD.value}")
     private int value;
 
-    public BeanD(String name, int value) {
+    public BeanD() {}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
         this.value = value;
     }
 

@@ -2,9 +2,6 @@ package task2;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import task2.beans.BeanB;
-import task2.beans.BeanC;
-import task2.beans.BeanD;
 import task2.config.AppConfig2;
 
 public class Application {
@@ -13,6 +10,5 @@ public class Application {
         for (String beanDefinitionName : context.getBeanDefinitionNames()) {
             System.out.println(beanDefinitionName);
         }
-
     }
 }

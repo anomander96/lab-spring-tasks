@@ -11,10 +11,7 @@ public class BeanB {
     @Value("${beanB.value}")
     private int value;
 
-    public BeanB(String name, int value) {
-        this.name = name;
-        this.value = value;
-    }
+    public BeanB() {}
 
     @Override
     public String toString() {

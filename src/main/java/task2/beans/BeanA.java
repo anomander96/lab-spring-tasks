@@ -10,8 +10,21 @@ public class BeanA implements InitializingBean, DisposableBean {
     private String name;
     private int value;
 
-    public BeanA(String name, int value) {
+    public BeanA() {}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
         this.value = value;
     }
 
